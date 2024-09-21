@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quotes</title>
+  <link rel="stylesheet" href="css/navigation.css" />
+  <link rel="stylesheet" href="css/followUp.css" />
+  <link rel="stylesheet" href="css/data.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+
+</head>
+<body>
+  <div class="container">
+    <sidebar></sidebar>
+    <section class="quote-data">
+      <h1>Your Saved Quotes</h1>
+      <div id="quotes-container"></div>
+    </section>
+  </div>
+  <script src="script/quote.js"></script>
+  <script src="script/loadSidebar.js"></script>
+  <!-- Fetch quotes on page load -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetchQuotes();
+    });
+  </script>
+</body>
+</html>

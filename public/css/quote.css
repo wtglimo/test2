@@ -1,0 +1,392 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 14px;
+    padding: 0 !important;
+}
+
+p {
+    margin: 0;
+}
+.trip-type{
+    display: flex;
+    gap: 20px;
+}
+.quote-generator {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media (max-width: 991px) {
+    .quote-generator {
+        flex-direction: column;
+        justify-content: center;
+    }   
+}
+
+.quote-container, .result-section {
+    max-width: 600px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quote-container {
+    flex: 2;
+    margin-right: 10px;
+}
+
+.result-section {
+    flex: 1;
+}
+.quote-price {
+    border: 1px solid #e0e0e0; /* Lighter border for a clean look */
+    border-radius: 10px; /* Slightly increased border-radius for a softer edge */
+    background-color: #f9f9f9; /* Very light grey background for subtle distinction */
+    padding: 20px; /* More padding for a spacious layout */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a slight elevation effect */
+    margin-top: 20px;
+}
+
+
+.quote-container h1, .result-section h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+.result, .intro-para, .quote-info, .copy-btn {
+    margin-top: 15px;
+}
+
+.intro-para {
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+
+.vehicle-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+.vehicle-name-link {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.vehicle-name-link p {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0073e6;
+}
+
+.details, .quote-info {
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.paragraph-padding {
+    padding-bottom: 15px;
+}
+
+.paragraph-reserve {
+    padding-top: 15px;
+    font-weight: 100;
+}
+
+.quote-type{
+   display: none;
+}
+
+.quote-info {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-size: 14px;
+}
+
+.quote-heading {
+    font-size: 18px;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.reserve-btn {
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.reserve-btn a {
+    background-color: green;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.reserve-btn a:hover {
+    background-color: darkgreen;
+}
+
+.image-container, .video-container {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.image-container img,
+.video-container img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.copy-btn {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.copy-btn button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.copy-btn button:hover {
+    background-color: #0056b3;
+}
+
+/* Smaller Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.switch-label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+    max-width: 40px;
+}
+
+.quote-expiry {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.form-group input, .form-group select {
+    width: auto;
+}
+
+.byob-text {
+    font-style: italic;
+    font-size: 12px;
+    color: #888;
+    font-weight: 100;
+}
+
+.quote-and-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quote-container {
+    flex: 2;
+    max-width: 600px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.result-section {
+    flex: 1;
+    max-width: 500px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.input-inline-style{
+    display: flex;
+}
+
+
+
+
+.byob-switch{
+    margin-top: 10px;
+}
+.inline-fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px; /* Adjust the gap between the fields */
+}
+
+.inline-fields > div {
+    flex: 1; /* Ensure both fields take up equal space */
+    display: flex;
+    flex-direction: column;
+    max-width: 48%; /* Adjust to prevent fields from stretching too much */
+}
+
+.inline-fields label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.inline-fields input {
+    width: 100%; /* Ensure input takes up full width of its container */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.quote-datetime {
+    font-size: 16px;
+    color: #888; /* Grey color */
+    margin-bottom: 10px; /* Space between date/time and other content */
+    display: flex;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.minimum-requirements{
+    margin-top: 10px;
+    font-weight: 100;
+}
+
+.vehicle-recommeded{
+    font-size: 15px;
+    color: #565656; /* Grey color */
+    font-weight: 100;
+}
+
+#max-rate, #min-rate{
+    font-weight: bold;
+}
+.rate-display{
+    margin-bottom: 5px;
+}
+.fleetAndRates{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#min-max-rates{
+    display: flex;
+    gap: 20px;
+}

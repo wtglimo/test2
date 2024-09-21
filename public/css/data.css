@@ -1,0 +1,153 @@
+/* CSS styles for quote cards */
+
+.quote-data {
+    width: 100%;
+  }
+  
+  .quote-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .quote-card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px;
+  }
+  
+  .quote-card-body {
+    flex: 1;
+  }
+  
+  .quote-card-body h3 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+  
+  .quote-card-body p {
+    margin: 5px 0;
+  }
+  
+  .quote-card-image {
+    margin-left: 15px;
+    flex-shrink: 0;
+  }
+  
+  .quote-card-image img {
+    width: 100%;
+    height: 176px;
+    border-radius: 4px;
+}  
+  .quote-card-actions {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .quote-card-actions button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .quote-card-actions button i {
+    margin-right: 5px;
+  }
+  
+  .quote-card-actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  .delete-quote-btn {
+    background-color: #dc3545;
+  }
+  
+  .delete-quote-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .copy-follow-up-btn {
+    background-color: #28a745;
+  }
+  
+  .copy-follow-up-btn:hover {
+    background-color: #218838;
+  }
+  
+  .copy-text-message-btn {
+    background-color: #ffc107;
+    color: #212529;
+  }
+  
+  .copy-text-message-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  .availability {
+    font-weight: bold;
+  }
+  
+  .available {
+    color: green;
+  }
+  
+  .unavailable {
+    color: red;
+  }
+  
+  @media (max-width: 800px) {
+    .quote-card-content {
+      flex-direction: column;
+    }
+    .quote-card-image {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+    .quote-card-image img {
+      max-width: 100%;
+    }
+  }
+  
+
+
+  /* Styles for the toggle button */
+.toggle-details-btn {
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-details-btn i {
+    margin-right: 5px;
+  }
+  
+  /* Optional: Change color on hover */
+  .toggle-details-btn:hover {
+    color: #0056b3;
+  }
+  
+  /* Styles for the hidden details */
+  .quote-details {
+    padding-left: 15px;
+  }
+  
+  .quote-details p {
+    margin: 3px 0;
+  }
+  

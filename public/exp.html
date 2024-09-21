@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <style>
+body, p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+.signature-container {
+  width: 100%;
+  max-width: 500px;
+  padding-bottom: 10px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.logo-container {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  max-width: 205px;
+}
+
+.logo-container img{
+    max-width: 200px;
+}
+
+.address a{
+  color: #000000;
+}
+.contact-info {
+  padding: 10px 0;
+}
+.contact-info div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.contact-info div img {
+  width: 20px; /* Adjusted icon size */
+  height: 20px;
+  margin-right: 10px;
+  transition: filter 0.3s ease;
+}
+.contact-info a {
+  color: #000000;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+.social-icons a {
+  margin-right: 15px;
+  text-decoration: none;
+}
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.3s ease;
+}
+.footer-note {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  color: #999;
+  font-size: 12px;
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <sidebar></sidebar>
+        <main class="content">
+            <div class="signature-container">
+                <div class="logo-container">
+                  <div><img src="https://www.wtglimo.com/img/logo-gold-silver2.png" alt="WAY TO GO"></div>
+              </div>
+              <div class="contact-info">
+                <div>
+                  <img src="https://www.wtglimo.com/img/icons/call-icon.png" alt="Phone Icon">
+                  <span><a href="tel:+18557915466">(855) 791-5466</a></span>
+                </div>
+                <div>
+                  <img src="https://wtglimo.com/img/icons/email-icon.png" alt="Email Icon">
+                  <span><a href="mailto:waytogotrolley@gmail.com">waytogotrolley@gmail.com</a></span>
+                </div>
+                <div>
+                  <img src="https://www.wtglimo.com/img/icons/www.png" alt="Website Icon">
+                  <span><a href="https://wtglimo.com" target="_blank">wtglimo.com</a></span>
+                </div>
+                <div class="address">
+                  <img src="https://www.wtglimo.com/img/icons/map.png" alt="Address Icon">
+                  <span>1326 N Rand Rd
+                    Arlington Heights, IL 60004</span>
+                </div>
+                <div>
+                  <img src="https://www.wtglimo.com/img/icons/card.png" alt="IRIS Icon">
+                  <span>IRIS 387415</span>
+                </div>
+              </div>
+              <div class="social-icons">
+                <a href="https://www.instagram.com/waytogotrolley/" target="_blank">
+                  <img src="https://www.wtglimo.com/img/icons/instagram.png" alt="Instagram Icon">
+                </a>
+                <a href="https://www.facebook.com/WayToGoLimousine/" target="_blank">
+                  <img src="https://www.wtglimo.com/img/icons/facebook.png" alt="Facebook Icon">
+                </a>
+                <a href="https://www.yelp.com/biz/way-to-go-trolley-and-bus-rental-palatine-2?utm_medium=biz_embedded_content&utm_source=biz_badge" target="_blank">
+                  <img src="https://www.wtglimo.com/img/icons/yelp.png" alt="Yelp Icon">
+                </a>
+                <a href="https://www.youtube.com/@wtglimo" target="_blank">
+                  <img src="https://www.wtglimo.com/img/icons/youtube.png" alt="YouTube Icon">
+                </a>
+              </div>
+              <div class="footer-note">
+                  This email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to which they are addressed. If you have received this email in error please notify the system manager. If you are not the intended recipient you are notified that disclosing, copying, distributing or taking any action in reliance on the contents of this information is strictly prohibited.
+              </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script/loadSidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Full height of the viewport */
+}
+
+/* Sidebar styles */
+sidebar {
+  width: 240px;
+  background-color: #293949;
+  display: block;
+  color: #aeb2b7;
+  overflow-y: auto; /* Allows scrolling if content is too tall */
+}
+
+.sidebar-content {
+  padding: 15px;
+}
+
+#leftside-navigation {
+  margin: 0;
+  padding: 0;
+}
+
+#leftside-navigation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#leftside-navigation ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#leftside-navigation ul li a {
+  color: #aeb2b7;
+  text-decoration: none;
+  display: block;
+  padding: 18px 25px;
+  font-size: 14px;
+  transition: all 0.2s ease-in;
+}
+
+#leftside-navigation ul li a:hover {
+  color: #1abc9c;
+  background-color: #1a242f;
+}
+
+#leftside-navigation ul li a i {
+  margin-right: 10px;
+}
+
+#leftside-navigation ul li a .arrow {
+  float: right;
+  margin-top: 5px;
+}
+
+#leftside-navigation .sub-menu ul {
+  display: none;
+  background-color: #23313f;
+}
+
+#leftside-navigation .sub-menu ul li {
+  border-bottom: none;
+}
+
+#leftside-navigation .sub-menu ul li a {
+  padding: 15px 35px;
+  font-size: 12px;
+}
+
+/* Active states */
+#leftside-navigation .sub-menu.active > a {
+  color: #1abc9c;
+}
+
+#leftside-navigation .sub-menu.active ul {
+  display: block;
+}
+
+/* Main content styles */
+main.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  main.content {
+    padding: 10px;
+  }
+}

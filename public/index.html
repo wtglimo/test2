@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WTG QUOTE GENERATOR</title>
+
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/quote.css" />
+  </head>
+  <body>
+    <div class="container">
+      <sidebar></sidebar>
+      <main class="content">
+        <section class="quote-generator">
+          <div class="quote-container">
+            <h1>Quote Generator</h1>
+            <div class="form-group quote-type">
+              <label>
+                <input type="radio" name="quote-type" value="custom" checked />
+                Custom Quote
+              </label>
+              <label>
+                <input type="radio" name="quote-type" value="preset" /> Pre-set
+                Quote
+              </label>
+            </div>
+
+            <div class="form-group trip-type">
+              <label>
+                <input type="radio" name="trip-type" value="hourly" checked />
+                Hourly
+              </label>
+              <label>
+                <input type="radio" name="trip-type" value="one-way" /> Tranfer
+              </label>
+              <label>
+                <input type="radio" name="trip-type" value="two-way" /> Round
+                Trip
+              </label>
+            </div>
+
+            <div class="form-group inline-fields">
+              <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date" placeholder="Date" required />
+              </div>
+              <div>
+                <label for="time">Time:</label>
+                <input type="time" id="time" placeholder="Time" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Customer Name:</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Customer Name"
+                required
+              />
+            </div>
+            <div class="form-group vehicle-availability">
+              <label for="vehicle-available-switch" class="switch-label"
+                >Vehicle Available</label
+              >
+              <label class="switch">
+                <input type="checkbox" id="vehicle-available" checked />
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="fleetAndRates">
+              <div class="form-group">
+                <label for="vehicle">Vehicle Type:</label>
+                <select id="vehicle">
+                  <optgroup label="Trolley">
+                    <option value="trolley_midnight_36">
+                      36 Trolley Midnight
+                    </option>
+                    <option value="trolley_fusion_30">30 Trolley Fusion</option>
+                    <option value="trolley_bliss_30">30 Trolley Bliss</option>
+                    <option value="trolley_classic_30">
+                      30 Trolley Classic
+                    </option>
+                    <option value="trolley_festive_24">
+                      24 Trolley Festive
+                    </option>
+                  </optgroup>
+                  <optgroup label="Party Bus">
+                    <option value="partybus_dove_40">
+                      40 Party Bus - Dove
+                    </option>
+                    <option value="partybus_nightrider_30">
+                      30 Party Bus - Night Rider
+                    </option>
+                    <option value="partybus_eagle_25">
+                      25 Party Bus - Eagle
+                    </option>
+                    <option value="partybus_whitehawk_20">
+                      20 Party Bus - White Hawk
+                    </option>
+                  </optgroup>
+                  <optgroup label="Limo Van">
+                    <option value="ford_transit_limo">
+                      15 Ford Transit Limo
+                    </option>
+                    <option value="sprinter_shuttle_van">
+                      14 Sprinter Shuttle Van
+                    </option>
+                  </optgroup>
+                  <optgroup label="Coach Bus">
+                    <option value="coach_bus_super">
+                      50 Coach Bus - Super
+                    </option>
+                    <option value="coach_bus_corporate">
+                      40 Coach Bus - Corporate
+                    </option>
+                    <option value="coach_bus_crystal">
+                      25 Coach Bus - Crystal
+                    </option>
+                    <option value="coach_bus_rentals">56 Motor Coach</option>
+                  </optgroup>
+                  <optgroup label="Pink Limo">
+                    <option value="pink_hummer_h2">18 Pink Hummer H2</option>
+                    <option value="pink_chrysler_300">
+                      10 Pink Chrysler 300
+                    </option>
+                  </optgroup>
+                  <optgroup label="SUV Stretch Limo">
+                    <option value="hummer_h2_stretch_limo">
+                      18 Hummer H2 Stretch Limo
+                    </option>
+                  </optgroup>
+                  <optgroup label="Sedan Stretch Limo">
+                    <option value="chrysler_300_limo">
+                      10 Chrysler 300 Limo
+                    </option>
+                    <option value="lincoln_mkt_limo">8 Lincoln MKT Limo</option>
+                  </optgroup>
+                  <optgroup label="SUV">
+                    <option value="lincoln_navigator">
+                      6 Lincoln Navigator
+                    </option>
+                    <option value="cadillac_escalade">
+                      6 Cadillac Escalade
+                    </option>
+                    <option value="chevrolet_suburban">
+                      6 Chevrolet Suburban
+                    </option>
+                  </optgroup>
+                  <optgroup label="Sedan">
+                    <option value="lincoln_mkz">3 Lincoln MKZ</option>
+                  </optgroup>
+                  <optgroup label="Christmas Trolley">
+                    <option value="christmas_trolley">Christmas Trolley</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group" id="vehicle-rates">
+                <p class="rate-display">
+                  <strong>Suggested Rates:</strong>
+                  <span id="selected-day"></span>
+                </p>
+                <div id="min-max-rates">
+                  <p>High: <span id="max-rate"></span></p>
+                  <p>Low: <span id="min-rate"></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="form-group preset-hours">
+              <label for="preset-hours">Number of Hours:</label>
+              <input type="number" id="preset-hours" min="4" value="4" />
+            </div>
+
+            <div
+              class="form-group min-hours-policy"
+              id="include-min-hours-policy-div"
+            >
+              <label for="include-min-hours-policy-switch" class="switch-label"
+                >Include Minimum Hours Policy</label
+              >
+              <label class="switch">
+                <input type="checkbox" id="include-min-hours-policy" />
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div
+              id="preset-quote-alcohol-policy"
+              class="form-group alcohol-policy"
+            >
+              <label for="include-alcohol-policy-switch" class="switch-label"
+                >Include Alcohol Policy</label
+              >
+              <label class="switch">
+                <input type="checkbox" id="include-alcohol-policy" />
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div
+              id="custom-quote-fields"
+              class="form-group"
+              style="display: none"
+            >
+              <div class="form-group inline-fields">
+                <div>
+                  <label for="hours">Number of Hours:</label>
+                  <input type="number" id="hours" min="4" value="4" />
+                </div>
+                <div id="base-rate">
+                  <label for="custom-base-rate">Base Rate:</label>
+                  <input
+                    type="number"
+                    id="custom-base-rate"
+                    placeholder="Base Rate"
+                  />
+                </div>
+              </div>
+
+              <label for="custom-gas-fee">Gas Fee:</label>
+              <input type="number" id="custom-gas-fee" placeholder="Gas Fee" />
+            </div>
+
+            <div
+              id="custom-quote-hours-byob"
+              class="form-group"
+              style="display: none"
+            >
+              <div class="form-group alcohol-policy">
+                <label for="include-alcohol-policy-switch" class="switch-label"
+                  >Include Alcohol Policy</label
+                >
+                <label class="switch">
+                  <input type="checkbox" id="include-alcohol-policy-custom" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <!-- BYOB Toggle -->
+              <label for="include-byob-switch" class="switch-label byob-switch"
+                >Include BYOB</label
+              >
+              <label class="switch">
+                <input type="checkbox" id="include-byob" />
+                <span class="slider"></span>
+              </label>
+
+              <div id="byob-fields" style="display: none">
+                <div class="inline-fields">
+                  <input
+                    type="number"
+                    id="custom-byob-hours"
+                    placeholder="BYOB Hours"
+                  />
+                  <input
+                    type="number"
+                    id="custom-rate-byob"
+                    placeholder="BYOB Rate"
+                  />
+                </div>
+              </div>
+
+              <!-- Additional Hours Toggle -->
+              <label for="include-additional-hours-switch" class="switch-label"
+                >Include Additional Hours</label
+              >
+              <label class="switch">
+                <input type="checkbox" id="include-additional-hours" />
+                <span class="slider"></span>
+              </label>
+
+              <div id="additional-hours-fields" style="display: none">
+                <div class="inline-fields">
+                  <input
+                    type="number"
+                    id="custom-additional-hours"
+                    placeholder="Additional Hours"
+                  />
+                  <input
+                    type="number"
+                    id="custom-rate-additional"
+                    placeholder="Additional Hours Rate"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group byob-switch">
+              <label for="include-alcohol-switch" class="switch-label"
+                >Include BYOB (Alcohol)</label
+              >
+              <label class="switch">
+                <input type="checkbox" id="include-alcohol" />
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <button onclick="calculateQuote()">Get Quote</button>
+          </div>
+
+          <div class="result-section">
+            <div class="result" id="result"></div>
+            <div class="copy-btn">
+              <button onclick="copyToClipboard()">Copy Quote</button>
+            </div>
+          </div>
+          <!-- Place this button in your result section after generating the quote -->
+          <div class="save-btn">
+            <button id="save-quote-btn" onclick="saveQuote()">
+              Save Quote
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script/quote.js"></script>
+    <script src="script/loadSidebar.js"></script>
+  </body>
+</html>

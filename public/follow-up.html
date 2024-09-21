@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Follow Up Generator</title>
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/followUp.css">
+
+</head>
+<body>
+  <div class="container"> 
+    <sidebar></sidebar>
+    <main class="content">
+      <h1>Follow Up Generator</h1>
+      <div class="row">
+        <form class="form-section" onsubmit="generateMessage(); return false;">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required><br><br>
+    
+          <label for="vehicle">Vehicle:</label>
+          <select id="vehicle">
+            <optgroup label="Trolley">
+                <option value="trolley_midnight_36">36 Trolley Midnight</option>
+                <option value="trolley_fusion_30">30 Trolley Fusion</option>
+                <option value="trolley_bliss_30">30 Trolley Bliss</option>
+                <option value="trolley_classic_30">30 Trolley Classic</option>
+                <option value="trolley_festive_24">24 Trolley Festive</option>
+            </optgroup>
+            <optgroup label="Party Bus">
+                <option value="partybus_dove_40">40 Party Bus - Dove</option>
+                <option value="partybus_nightrider_30">30 Party Bus - Night Rider</option>
+                <option value="partybus_eagle_25">25 Party Bus - Eagle</option>
+                <option value="partybus_whitehawk_20">20 Party Bus - White Hawk</option>
+            </optgroup>
+            <optgroup label="Limo Van">
+                <option value="ford_transit_limo">15 Ford Transit Limo</option>
+                <option value="sprinter_shuttle_van">14 Sprinter Shuttle Van</option>
+            </optgroup>
+            <optgroup label="Coach Bus">
+              <option value="coach_bus_super">50 Coach Bus - Super</option>
+              <option value="coach_bus_corporate">40 Coach Bus - Corporate</option>
+              <option value="coach_bus_crystal">25 Coach Bus - Crystal</option>
+              <option value="coach_bus_rentals">56 Motor Coach</option>
+          </optgroup>
+            <optgroup label="Pink Limo">
+              <option value="pink_hummer_h2">18 Pink Hummer H2</option>
+              <option value="pink_chrysler_300">10 Pink Chrysler 300</option>
+            </optgroup>
+            <optgroup label="SUV Stretch Limo">
+                <option value="hummer_h2_stretch_limo">18 Hummer H2 Stretch Limo</option>
+            </optgroup>
+            <optgroup label="Sedan Stretch Limo">
+                <option value="chrysler_300_limo">10 Chrysler 300 Limo</option>
+                <option value="lincoln_mkt_limo">8 Lincoln MKT Limo</option>
+            </optgroup>
+            <optgroup label="SUV">
+                <option value="lincoln_navigator">6 Lincoln Navigator</option>
+                <option value="cadillac_escalade">6 Cadillac Escalade</option>
+                <option value="chevrolet_suburban">6 Chevrolet Suburban</option>
+            </optgroup>
+            <optgroup label="Sedan">
+                <option value="lincoln_mkz">3 Lincoln MKZ</option>
+            </optgroup>
+            <optgroup label="Christmas Trolley">
+                <option value="christmas_trolley">Christmas Trolley</option>
+            </optgroup>
+          </select><br><br>
+    
+          <label for="price">Price:</label>
+          <input type="number" step="0.01" id="price" required><br><br>
+    
+          <input type="submit" value="Generate Message">
+        </form>
+    
+        <div class="output-section">
+          <pre id="output"></pre>
+          <button onclick="copyMessage()" class="btn-copy">Copy</button>
+        </div>
+      </div>
+    </main>
+    
+  </div>
+  <script src="script/loadSidebar.js"></script>
+  <script src="script/followUp.js"></script>
+</body>
+</html>
